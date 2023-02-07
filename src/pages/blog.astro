@@ -1,9 +1,35 @@
-<body>
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
+---
+import '../styles/global.css';
+const pageTitle = "Blog";
+const skillColor = "green";
+const fontWeight = "bold";
+const textCase = "uppercase";
+---
+<html>
+  <head>
+    <title>{pageTitle}</title>
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+      h1 {
+        color: purple;
+        font-size: 2rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
 
-  <h1>My Astro Site</h1>
-  <h1>My Astro Learning Blog</h1>
-  <p>This is where I will post about my journey learning Astro.</p>
-</body>
+    <h1>My Astro Site</h1>
+    <h1>My Astro Learning {pageTitle}</h1>
+    <p>This is where I will post about my journey learning Astro.</p>
+    <ul>
+      <li class="skill"><a href="/posts/first/">First</a></li>
+    </ul>
+  </body>
+</html>
