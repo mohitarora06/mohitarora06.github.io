@@ -1,28 +1,14 @@
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Blog";
 const skillColor = "green";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
-<html>
-  <head>
-    <title>{pageTitle}</title>
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-      h1 {
-        color: purple;
-        font-size: 2rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-      }
-    </style>
-  </head>
+<BaseLayout pageTitle={pageTitle}>
   <body>
-    <Navigation />
     <h1>My Astro Site</h1>
     <h1>My Astro Learning {pageTitle}</h1>
     <p>This is where I will post about my journey learning Astro.</p>
@@ -33,4 +19,4 @@ const textCase = "uppercase";
 			import "../scripts/menu.js";
 		</script> 
   </body>
-</html>
+</BaseLayout>
