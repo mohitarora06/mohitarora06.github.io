@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>🧑‍🚀 Hello, Everyone!</h1>
+			<p>
+				Welcome to my personal page! My name is <b>Mohit Arora</b>, and I am a passionate and driven software developer. 
+				I have always been fascinated by technology and how it can be used to solve real-world problems, and I am constantly striving to learn and 
+				grow in my field.I have experience working with a wide range of programming languages, including Java, Python, C#, HCL, etc. and have worked
+				on a variety of projects, from developing web applications to setting up infrastructure. I have experience with cloud-based technologies such as AWS and Azure.
+			</p>
+			<p>
+				One of my strengths as a developer is my ability to work collaboratively with other team members, including designers, stakeholders, and
+				fellow developers. I believe that effective communication and a willingness to listen and learn from others is key to the success of any project.
+			</p>
+			<p>
+				In addition to my technical skills, I am also a problem-solver at heart, and am always looking for ways to streamline processes and 
+				find more efficient solutions. I am passionate about staying up-to-date with the latest trends and technologies in the industry, and 
+				enjoy attending conferences and meetups to network and learn from other developers.
+			</p>	
+			<p>
+				When I'm not coding, you can find me gaming, reading, or experimenting with new recipes in the kitchen. I believe that it's important
+				to have a healthy work-life balance, and strive to make time for the things that bring me joy and relaxation.
+			</p>
+			<p>
+				Thank you for taking the time to visit my page, and I look forward to connecting with other like-minded developers in the future!
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
